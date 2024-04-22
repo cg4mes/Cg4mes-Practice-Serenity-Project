@@ -55,7 +55,6 @@
             <artifactId>hamcrest</artifactId>
             <version>2.2</version>
         </dependency>
-
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
@@ -87,12 +86,8 @@
             <version>4.13.2</version>
         </dependency>
     </dependencies>
+
     <build>
-        <testResources>
-            <testResource>
-                <directory>src/test/java/</directory>
-            </testResource>
-        </testResources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

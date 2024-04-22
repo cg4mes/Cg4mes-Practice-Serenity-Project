@@ -10,10 +10,10 @@ import net.thucydides.model.util.EnvironmentVariables;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class OpenBrowserWeb implements Task {
+public class UseBrowser implements Task {
 
-    public static OpenBrowserWeb get(){
-        return instrumented(OpenBrowserWeb.class);
+    public static UseBrowser get(){
+        return instrumented(UseBrowser.class);
     }
 
     @Override

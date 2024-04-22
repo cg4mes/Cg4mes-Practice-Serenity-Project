@@ -22,4 +22,4 @@ jobs:
           distribution: 'adopt'
 
       - name: Run tests
-        run: mvn clean test -Denvironments=web
+        run: mvn clean test

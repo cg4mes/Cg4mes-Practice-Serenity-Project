@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "rerun:target/rerun.txt", "json:target/destination/cucumber.json"},
         features ={"src/test/resources/features"},
         glue = {"features.steps","screenplay.actors"},
-        tags = "@Browser"
+        tags = "@BrowserMobile"
 )
-public class RunnerClass {
+public class RunnerMobile {
 }
