@@ -7,19 +7,17 @@ import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.actors.OnStage;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import static screenplay.actors.Hooks.environment;
 
 public class OpenBrowser {
-    @Dado("actor quien desea abrir chrome en su pc")
-    public void openBrowserWeb(){
-        theActorCalled("Actor").attemptsTo(
-                UseBrowser.get()
-        );
+    @Dado("actor quien desea abrir el navegador")
+    public void openBrowser(){
+        theActorCalled("Actor")
+                .attemptsTo(
+                        UseBrowser.getBaseUrl()
+                );
     }
-    @Dado("actor quien desea abrir chrome en su telefono")
-    public void openBrowserMobile(){
-        OnStage.theActorCalled("actorName")
-                .describedAs("ActorDescription");
-    }
+
     @Cuando("use el webDriver")
     public void useWebDriver(){
 

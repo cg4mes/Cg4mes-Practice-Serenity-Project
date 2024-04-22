@@ -12,7 +12,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class UseBrowser implements Task {
 
-    public static UseBrowser get(){
+    public static UseBrowser getBaseUrl(){
         return instrumented(UseBrowser.class);
     }
 
@@ -20,7 +20,7 @@ public class UseBrowser implements Task {
     public <T extends Actor> void performAs(T actor) {
         SystemPropertiesConfiguration configuration = new SystemPropertiesConfiguration(SystemEnvironmentVariables.createEnvironmentVariables());
         EnvironmentVariables environmentVariables = configuration.getEnvironmentVariables();
-        String url = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("url");
-        actor.attemptsTo(Open.url(url));
+        String baseUrl = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("baseUrl");
+        actor.attemptsTo(Open.url(baseUrl));
     }
 }

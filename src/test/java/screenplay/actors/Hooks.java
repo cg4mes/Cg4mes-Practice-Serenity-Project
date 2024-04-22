@@ -10,9 +10,10 @@ import net.thucydides.model.util.EnvironmentVariables;
 
 public class Hooks {
     private EnvironmentVariables environmentVariables;
+    public static String environment;
     @Before
     public void setUp(Scenario scenario){
-        String environment;
+
         try{
             environment = System.getProperty("environment");
         }catch (RuntimeException e){
